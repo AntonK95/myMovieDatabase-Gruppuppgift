@@ -15,7 +15,7 @@ footer {
 p {
     font-family: var(--desc-font-family);
     font-size: var(--desc-font-size);
-    font-weight: var(--desc-font-weight);
+    font-weight: var(--header-font-weight);
     color: var(--white);
 }
 
