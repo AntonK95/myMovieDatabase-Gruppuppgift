@@ -3,6 +3,7 @@
 import './App.css'
 import Homepage from './pages/homepage/Homepage.jsx'
 import Footer from './components/footer/Footer'
+import NavigationHeader from "./navigation/NavigationHeader"
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
 
 
     <div className="app">
+       <NavigationHeader/>
       <Homepage />
       
       <Footer />
@@ -17,6 +19,7 @@ function App() {
 
 
   )
+
 }
 
 export default App;
