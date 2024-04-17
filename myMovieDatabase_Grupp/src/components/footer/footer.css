@@ -12,7 +12,7 @@ footer {
     padding: 1rem;
 }
 
-p {
+.social__follow {
     font-family: var(--desc-font-family);
     font-size: var(--desc-font-size);
     font-weight: var(--header-font-weight);
@@ -28,4 +28,8 @@ ul {
     align-items: center;
     gap: .7rem;
     padding-top: .7rem;
+}
+
+li {
+    cursor: pointer;
 }
