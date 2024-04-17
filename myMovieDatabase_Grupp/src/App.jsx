@@ -1,8 +1,8 @@
 
 
 import './App.css'
-import Footer from './components/footer/Footer';
 import Homepage from './pages/homepage/Homepage.jsx'
+import Footer from './components/footer/Footer'
 
 function App() {
 
