@@ -11,13 +11,16 @@
   --blue: #01476D;
   --blue-green: #054553;
 
-  --header-font-family: 14px Helvetica, sans-serif;
-  --header-font-weight: 400;
+  --header-font-family: Helvetica, sans-serif;
+  --header-font-size: 14px;
+  --header-font-weight: 700;
 
-  --heading-font-family: 30px Arial, Helvetica, sans-serif;
-  --heading-font-family: 400;
+  --heading-font-family: Arial, Helvetica, sans-serif;
+  --heading-font-size: 30px;
+  --heading-font-weight: 500;
 
-  --desc-font-family: 14px arial, Helvetica, sans-serif;
-  --desc-font-family: 400;
+  --desc-font-family: Arial, Helvetica, sans-serif;
+  --desc-font-size: 14px;
+  --desc-font-weight: 400;
 
 }
