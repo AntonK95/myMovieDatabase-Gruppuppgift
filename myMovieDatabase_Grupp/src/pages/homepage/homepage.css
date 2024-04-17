@@ -1,0 +1,7 @@
+.website__container {
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100vh;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
