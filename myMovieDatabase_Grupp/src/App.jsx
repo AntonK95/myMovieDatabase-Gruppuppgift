@@ -1,16 +1,21 @@
 
+
 import './App.css'
 import Footer from './components/footer/Footer';
-// import Footer from './src/components/footer/Footer';
+import Homepage from './pages/homepage/Homepage.jsx'
 
 function App() {
 
   return (
-    <>
-      <h1>Anton</h1>
-      {/* <Footer /> */}
+
+
+    <div className="app">
+      <Homepage />
+      
       <Footer />
-    </>
+    </div>
+
+
   )
 }
 
