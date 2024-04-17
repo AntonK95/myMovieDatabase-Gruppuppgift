@@ -1,0 +1,8 @@
+
+.single-page__container {
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: var(--blue);
+    display: felx;
+    flex-direction: column;
+}
