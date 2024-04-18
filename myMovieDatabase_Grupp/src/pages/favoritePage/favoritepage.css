@@ -1,0 +1,17 @@
+
+
+
+.favorite__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 2rem auto;
+    gap: 2rem;
+}
+
+
+.favorite__movie-card {
+    height: 300px;
+    width: 180px;
+    background-color: var(--blue-green);
+    margin: auto;
+}
