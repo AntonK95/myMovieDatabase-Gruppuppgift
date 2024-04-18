@@ -14,12 +14,11 @@ function App() {
 
     <div className="app">
       <NavigationHeader />
-      <Homepage />
-      <WatchlistPage />
       <section className='inner__page-container'>
         <Homepage />
       
         <FavoritePage />
+        <WatchlistPage />
       </section>
       <Footer />
     </div>
