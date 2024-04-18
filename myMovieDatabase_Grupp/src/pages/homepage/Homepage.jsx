@@ -2,9 +2,13 @@ import SingleFilmPage from '../singleFilmPage/SingleFilmPage'
 import './homepage.css'
 import { Link } from 'react-router-dom'
 
+import Cards from '../../components/cards/Cards'
 function Homepage() {
     return (
         <div className="website__container">
+
+       
+
             <section className='hero__container'>
                 <div className="hero__background-left"></div>
                 <img src="./src/assets/scream-hero.png" alt="movie picture" className="homepage__hero" />
@@ -18,7 +22,7 @@ function Homepage() {
             </section >
                 <section className='top-films__container'>
                     <h2>TOP FILMS</h2>
-                    <article></article>
+                    <article><Cards /></article>
                     <article></article>
                     <article></article>
                     <article></article>
@@ -28,7 +32,7 @@ function Homepage() {
                 <article></article>
                 <article></article>
             </section>
-        </div >
+        </div>
     )
 }
 
