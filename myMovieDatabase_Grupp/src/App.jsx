@@ -8,6 +8,8 @@ import NavigationHeader from './components/header/NavigationHeader.jsx';
 
 import WatchlistPage from './pages/watchlistPage/WatchlistPage.jsx';
 import FavoritePage from './pages/favoritePage/FavoritePage.jsx';
+import SearchResultsPage from './pages/searchResultsPage/SearchResultsPage.jsx';
+import { Routes, Route } from 'react-router-dom'
 
 
 function App() {
@@ -18,10 +20,15 @@ function App() {
     <div className="app">
       <NavigationHeader />
       <section className='inner__page-container'>
-        <Homepage />
+
         
-        <FavoritePage />
-        <WatchlistPage />
+        <Routes>
+          <Route path='/' element={<Homepage />} />
+          <Route path='/SearchResultsPage' element={<SearchResultsPage />} />
+          <Route path='/FavoritePage' element={<FavoritePage />} />
+          <Route path='/WatchlistPage' element={<WatchlistPage />} />
+        </Routes>
+
       </section>
       <Footer />
     </div>
