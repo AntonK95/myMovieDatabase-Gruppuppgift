@@ -11,27 +11,27 @@ import FavoritePage from './pages/favoritePage/FavoritePage.jsx';
 import SearchResultsPage from './pages/searchResultsPage/SearchResultsPage.jsx';
 import { Routes, Route } from 'react-router-dom'
 import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 
 function App() {
 
+  const [movies, setMovies] = useState([]);
 
-async function myTopMovies() {
+  const topMovies = async () => {
     try {
-        const response = await axios.get('https://santosnr6.github.io/Data/movies.json');
-
-        const topMoviesData = response.data;
-        // topMoviesData.forEach(movie => {
-        //     console.log(movie);
-        // });
-        return topMoviesData;
-
+      const response = await axios.get('https://santosnr6.github.io/Data/movies.json');
+      setMovies(response.data);
+      console.log(response.data);
     } catch (error) {
-        console.log('Ojsan, något gick fel. Kan inte hämta data från API', error);
-        return [];
+      console.log(error);
     }
-}
-console.log(myTopMovies);
+  };
+
+  useEffect(() => {
+    topMovies();
+  }, []);
+
 
   return (
 
