@@ -1,6 +1,7 @@
 
 
-.watchlist__container {
+
+.search-result__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 2rem auto;
@@ -8,7 +9,7 @@
 }
 
 
-.watchlist__movie-card {
+.search-result__movie-card {
     height: 300px;
     width: 180px;
     background-color: var(--blue-green);
