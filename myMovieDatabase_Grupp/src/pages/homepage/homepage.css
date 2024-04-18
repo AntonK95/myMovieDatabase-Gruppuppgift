@@ -81,7 +81,7 @@ h1 {
     flex-direction: row;
     padding: 1.5rem;
     color: var(--blue-green);
-    background-color: var(--grey);
+    background-color: var(--light-grey);
     font-family: var(--header-font-family);
     min-height: 400px;
 }

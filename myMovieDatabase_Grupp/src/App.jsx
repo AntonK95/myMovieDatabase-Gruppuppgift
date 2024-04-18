@@ -7,7 +7,9 @@ import NavigationHeader from './components/header/NavigationHeader.jsx';
 import WatchlistPage from './pages/watchlistPage/WatchlistPage.jsx';
 import FavoritePage from './pages/favoritePage/FavoritePage.jsx';
 import SearchResultsPage from './pages/searchResultsPage/SearchResultsPage.jsx';
+import SingleFilmPage from './pages/singleFilmPage/SingleFilmPage.jsx';
 import { Routes, Route } from 'react-router-dom'
+
 
 function App() {
 
@@ -22,6 +24,7 @@ function App() {
           <Route path='/SearchResultsPage' element={<SearchResultsPage />} />
           <Route path='/FavoritePage' element={<FavoritePage />} />
           <Route path='/WatchlistPage' element={<WatchlistPage />} />
+          <Route path='/SingleFilmPage' element={<SingleFilmPage />} />
         </Routes>
       </section>
       <Footer />
