@@ -1,10 +1,11 @@
 import './homepage.css'
+
 import Cards from '../../components/cards/Cards'
 function Homepage() {
     return (
         <div className="website__container">
 
-        <Cards/>
+       
 
             <section className='hero__container'>
                 <div className="hero__background-left"></div>
@@ -18,7 +19,9 @@ function Homepage() {
             </section>
                 <section className='top-films__container'>
                     <h2>TOP FILMS</h2>
-                    <article></article>
+                    
+                    
+                    <article><Cards/></article>
                     <article></article>
                     <article></article>
                     <article></article>
