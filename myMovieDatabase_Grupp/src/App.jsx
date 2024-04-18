@@ -10,17 +10,28 @@ import WatchlistPage from './pages/watchlistPage/WatchlistPage.jsx';
 import FavoritePage from './pages/favoritePage/FavoritePage.jsx';
 import SearchResultsPage from './pages/searchResultsPage/SearchResultsPage.jsx';
 import { Routes, Route } from 'react-router-dom'
-// import axios from 'axios';
-// import { useEffect } from 'react';
+import axios from 'axios';
 
 
 function App() {
 
-  // useEffect(() => {
-  //   axios.get('https://santosnr6.github.io/Data/movies.json')
-  //     .then( response => response.json())
-  //     .catch(error => console.log(error))
-  // })
+
+async function myTopMovies() {
+    try {
+        const response = await axios.get('https://santosnr6.github.io/Data/movies.json');
+
+        const topMoviesData = response.data;
+        // topMoviesData.forEach(movie => {
+        //     console.log(movie);
+        // });
+        return topMoviesData;
+
+    } catch (error) {
+        console.log('Ojsan, något gick fel. Kan inte hämta data från API', error);
+        return [];
+    }
+}
+console.log(myTopMovies);
 
   return (
 
