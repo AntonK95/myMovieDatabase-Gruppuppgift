@@ -26,6 +26,7 @@ h2 {
     height: 400px;
     overflow: hidden;
 }
+
 .singlePage__btn {
     display: inline-block;
     padding: 10px 30px;
@@ -63,6 +64,7 @@ h2 {
     flex-direction: row;
     gap: 3rem;
     min-height: 400PX;
+    background-color: var(--white);
 }
 
 .details__left {

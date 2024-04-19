@@ -41,7 +41,6 @@ function App() {
       <NavigationHeader />
       <section className='inner__page-container'>
 
-        
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='/SearchResultsPage' element={<SearchResultsPage />} />
