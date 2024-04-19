@@ -1,19 +1,20 @@
 
 /*import SearchResultsPage from '../../pages/searchResultsPage/SearchResultsPage'*/
 import './navigation.css'
-import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+
+import SearchField from '../searchInput/SearchField'
 
 function NavigationHeader() {
 
-const [searchText, setSearchText] = useState('');
+// const [searchText, setSearchText] = useState('');
 const navigate = useNavigate();
 
-const handleInputChange = (event) => {
-setSearchText(event.target.value)
-}
+// const handleInputChange = (event) => {
+// setSearchText(event.target.value)
+// }
 
-const handleSearch = () => {
+const handleSearch = (searchText) => {
   navigate('/SearchResultsPage?query=${searchText}');
 }
 
@@ -36,9 +37,7 @@ const handleSearch = () => {
             </ul>
           </div>
           <div className='nav-right'>
-            
-              <input type="text" placeholder="Sök" onClick={handleSearch} onChange={handleInputChange}></input>
-            
+            <SearchField onSearch={handleSearch} />
           </div>
         </div>
       </div>

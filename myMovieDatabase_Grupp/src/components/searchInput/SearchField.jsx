@@ -4,11 +4,12 @@ import axios from 'axios';
 
 const apiKey = '567f8027';
 
-function SearchField() {
+function SearchField({ onSearch }) {
     const [searchTerm, setSearchTerm] = useState('');
 
     const handleSearchInput = (event) => {
       setSearchTerm(event.target.value);
+      onSearch(event.target.value);
     };
   
     const handleSearchSubmit = async (event) => {
