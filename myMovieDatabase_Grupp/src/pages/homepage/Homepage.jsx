@@ -1,6 +1,7 @@
 import './homepage.css'
 
 import Cards from '../../components/cards/Cards'
+import MovieListApi from '../../components/MovieListApi'
 function Homepage() {
     return (
         <div className="website__container">
@@ -21,7 +22,7 @@ function Homepage() {
                     <h2>TOP FILMS</h2>
                     
                     
-                    <article><Cards/></article>
+                    <article><MovieListApi/></article>
                     <article></article>
                     <article></article>
                     <article></article>
