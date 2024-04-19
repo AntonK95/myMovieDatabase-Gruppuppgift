@@ -6,15 +6,12 @@ import Cards from '../../components/cards/Cards'
 function Homepage() {
     return (
         <div className="website__container">
-
-       
-
             <section className='hero__container'>
                 <div className="hero__background-left"></div>
                 <img src="./src/assets/scream-hero.png" alt="movie picture" className="homepage__hero" />
                 <div className="hero__content">
                     <h1>Film Title</h1>
-                    <Link to='/details' role='link' element={<SingleFilmPage />}>
+                    <Link to='/SingleFilmPage' role='link' element={<SingleFilmPage />}>
                     <button className="om-filmen__btn">OM FILMEN
                     </button>
                 </Link>

@@ -41,9 +41,7 @@ function App() {
     <div className="app">
       <NavigationHeader />
       <section className='inner__page-container'>
-      {/* <SearchMovies /> */}
 
-        
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='/SearchResultsPage' element={<SearchResultsPage />} />

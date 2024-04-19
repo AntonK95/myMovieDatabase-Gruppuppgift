@@ -1,29 +1,22 @@
 
-// import SearchField from '../SearchField/SearchField'
+/*import SearchResultsPage from '../../pages/searchResultsPage/SearchResultsPage'*/
 import './navigation.css'
-import { Link } from 'react-router-dom'
-import { useState } from 'react';
-import axios from 'axios';
-
-const apiKey = '567f8027';
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 function NavigationHeader() {
 
-  const [searchTerm, setSearchTerm] = useState('');
+const [searchText, setSearchText] = useState('');
+const navigate = useNavigate();
 
-  const handleSearchInput = (event) => {
-    setSearchTerm(event.target.value);
-  };
+const handleInputChange = (event) => {
+setSearchText(event.target.value)
+}
 
-  const handleSearchSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const response = await axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`);
-      console.log(response.data);
-    } catch(error) {
-      console.log(error);
-    }
-  }
+const handleSearch = () => {
+  navigate('/SearchResultsPage?query=${searchText}');
+}
+
   return (
     <>
 
@@ -43,10 +36,9 @@ function NavigationHeader() {
             </ul>
           </div>
           <div className='nav-right'>
-          <form onSubmit={handleSearchSubmit}>
-        <input type="text" placeholder='Sök' value={searchTerm} onChange={handleSearchInput}></input>
-    </form>
-            {/* <SearchField onSearch={ handleSearch }/> */}
+            
+              <input type="text" placeholder="Sök" onClick={handleSearch} onChange={handleInputChange}></input>
+            
           </div>
         </div>
       </div>
