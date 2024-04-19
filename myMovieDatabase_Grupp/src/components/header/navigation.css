@@ -7,7 +7,7 @@
 
 body {
 
-    background-color: #D9D9D9;
+    background-color: var(--grey);
 
 }
 
@@ -16,20 +16,12 @@ body {
     max-width: 1200px;
     padding: 1.5rem;
     background-color: var(--white);
-
 }
 
 .nav-left {
-
     display: flex;
     flex-direction: row;
     align-items: center;
-
-.nav-container{
-max-width:1200px;
-padding: 1.5rem;
-background-color: white;
-margin: 0 auto;
 }
 
 .nav-left ul {
@@ -51,14 +43,11 @@ margin: 0 auto;
 
     text-decoration: none;
     color: var(--blue-green);
-    transition: var(--blue) 0.3s;
+    transition: 0.3s;
 }
 
 .nav-left li a:hover {
-    color: var(--blue);
-    transform: rotate(5deg);
-    transform-origin: center;
-    transition: transform 0.3s;
+    color: grey;
 }
 
 .nav-left img {

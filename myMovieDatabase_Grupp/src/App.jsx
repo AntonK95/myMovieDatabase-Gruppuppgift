@@ -11,9 +11,28 @@ import FavoritePage from './pages/favoritePage/FavoritePage.jsx';
 import SearchResultsPage from './pages/searchResultsPage/SearchResultsPage.jsx';
 import SingleFilmPage from './pages/singleFilmPage/SingleFilmPage.jsx';
 import { Routes, Route } from 'react-router-dom'
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 
 function App() {
+
+  const [movies, setMovies] = useState([]);
+
+  const topMovies = async () => {
+    try {
+      const response = await axios.get('https://santosnr6.github.io/Data/movies.json');
+      setMovies(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    topMovies();
+  }, []);
+
 
   return (
 
