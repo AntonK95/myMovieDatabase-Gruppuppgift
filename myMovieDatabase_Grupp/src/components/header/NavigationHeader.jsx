@@ -1,8 +1,21 @@
 
+/*import SearchResultsPage from '../../pages/searchResultsPage/SearchResultsPage'*/
 import './navigation.css'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 function NavigationHeader() {
+
+const [searchText, setSearchText] = useState('');
+const navigate = useNavigate();
+
+const handleInputChange = (event) => {
+setSearchText(event.target.value)
+}
+
+const handleSearch = () => {
+  navigate('/SearchResultsPage?query=${searchText}');
+}
 
   return (
     <>
@@ -23,8 +36,9 @@ function NavigationHeader() {
             </ul>
           </div>
           <div className='nav-right'>
-            <input type="text" value="Sök"></input>
-
+            
+              <input type="text" placeholder="Sök" onClick={handleSearch} onChange={handleInputChange}></input>
+            
           </div>
         </div>
       </div>

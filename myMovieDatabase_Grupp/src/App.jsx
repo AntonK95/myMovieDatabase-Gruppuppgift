@@ -36,7 +36,6 @@ function App() {
 
   return (
 
-
     <div className="app">
       <NavigationHeader />
       <section className='inner__page-container'>
