@@ -13,6 +13,7 @@ import SingleFilmPage from './pages/singleFilmPage/SingleFilmPage.jsx';
 import { Routes, Route } from 'react-router-dom'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+// import SearchMovies from './components/searchMovies/SearchMovies.jsx';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
   }, []);
 
 
+
   return (
 
     <div className="app">
@@ -47,7 +49,6 @@ function App() {
           <Route path='/WatchlistPage' element={<WatchlistPage />} />
           <Route path='/SingleFilmPage' element={<SingleFilmPage />} />
         </Routes>
-
       </section>
       <Footer />
     </div>
