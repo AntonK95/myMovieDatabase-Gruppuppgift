@@ -13,7 +13,11 @@ body {
 
 .nav-container {
     margin: 0 auto;
-    max-width: 1200px;
+    width: 100vw;
+    max-width: 1800px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
     padding: 1.5rem;
     background-color: var(--white);
 }
@@ -58,14 +62,19 @@ body {
 }
 
 .list-container {
-
+    margin: 0 auto;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 input[type=text] {
-
-    font-weight: 500;
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    color: var(--blue-green) ;
+    font-weight: 700;
     text-align: center;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }

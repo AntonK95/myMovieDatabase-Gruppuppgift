@@ -1,8 +1,22 @@
 
+/*import SearchResultsPage from '../../pages/searchResultsPage/SearchResultsPage'*/
 import './navigation.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+
+import SearchField from '../searchInput/SearchField'
 
 function NavigationHeader() {
+
+// const [searchText, setSearchText] = useState('');
+const navigate = useNavigate();
+
+// const handleInputChange = (event) => {
+// setSearchText(event.target.value)
+// }
+
+const handleSearch = (searchText) => {
+  navigate('/SearchResultsPage?query=${searchText}');
+}
 
   return (
     <>
@@ -11,7 +25,7 @@ function NavigationHeader() {
         <div className='list-container'>
           <div className='nav-left'>
             <Link to='/' role='link' aria-label='link to home'>
-              <img className='logo' src="./src/assets/logo.png" />
+              <img className='logo' src="./src/assets/logo.png" alt='logo' />
             </Link>
             <ul>
               <li>
@@ -23,8 +37,7 @@ function NavigationHeader() {
             </ul>
           </div>
           <div className='nav-right'>
-            <input type="text" value="Sök"></input>
-
+            <SearchField onSearch={handleSearch} />
           </div>
         </div>
       </div>

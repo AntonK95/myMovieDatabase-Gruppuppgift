@@ -13,6 +13,7 @@ import SingleFilmPage from './pages/singleFilmPage/SingleFilmPage.jsx';
 import { Routes, Route } from 'react-router-dom'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+// import SearchMovies from './components/searchMovies/SearchMovies.jsx';
 
 
 function App() {
@@ -34,14 +35,13 @@ function App() {
   }, []);
 
 
-  return (
 
+  return (
 
     <div className="app">
       <NavigationHeader />
       <section className='inner__page-container'>
 
-        
         <Routes>
           <Route path='/' element={<Homepage movies={movies} />} />
           <Route path='/SearchResultsPage' element={<SearchResultsPage />} />
@@ -49,7 +49,6 @@ function App() {
           <Route path='/WatchlistPage' element={<WatchlistPage />} />
           <Route path='/SingleFilmPage' element={<SingleFilmPage />} />
         </Routes>
-
       </section>
       <Footer />
     </div>
