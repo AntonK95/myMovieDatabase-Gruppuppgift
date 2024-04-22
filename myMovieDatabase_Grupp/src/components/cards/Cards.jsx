@@ -1,26 +1,48 @@
 import React from 'react'
 import './cards.css'
 
-function Cards() {
+function Cards({
+  movies
+
+}) {
+
+
+
+
   return (
     <>
-   
-    <div className='card-container'>
-      <img className="star" src="./src/assets/star.png"/>
-      <img className="eye" src="./src/assets/eye.png"/>
-      
-      <div className='card-container__img'>
-     <img src="./src/assets/bild5.webp"/>
-     </div>
-    
-    </div>
-    <div className='text-container'>
+      {
+        movies.map((movie) => {
 
-      <h2>Land of Bad</h2>
-    </div>
+          return (
+          
+              <div className='card-container'>
+                
+
+                <div className='card-container__img'>
+                <img className="star" src="./src/assets/star.png" />
+                <img className="eye" src="./src/assets/eye.png" />
+                  
+                  <img src={movie.poster} />
+                </div>
+
+
+                <div className='text-container'>
+
+                 <h5>{movie.title}</h5>
+                </div>
+              
+              </div>
+            
+          )
+
+
+        })
+      }
+
 
     </>
-)
+  )
 }
 
 export default Cards

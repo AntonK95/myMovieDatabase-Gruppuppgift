@@ -5,6 +5,13 @@ h1 {
     font-family: var(--header-font-family);
 }
 
+h2{
+
+    color: white;
+    opacity: 0.9;
+    margin-bottom:1rem;  
+}
+
 .website__container {
     margin: 0 auto;
     max-width: 1200px;
@@ -65,7 +72,7 @@ h1 {
 .top-films__container {
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 1rem;
     padding: 1.5rem;
     text-align: center;
@@ -73,6 +80,14 @@ h1 {
     min-height: 400px;
     color: var(--white);
     font-family: var(--header-font-family);
+}
+
+.top-films-grid{
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin:0 auto;
+    gap:20px;
 }
 
 .features__container {

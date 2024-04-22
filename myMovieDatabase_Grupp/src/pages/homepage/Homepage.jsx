@@ -3,8 +3,8 @@ import './homepage.css'
 import { Link } from 'react-router-dom'
 
 import Cards from '../../components/cards/Cards'
-import MovieListApi from '../../components/MovieListApi'
-function Homepage() {
+
+function Homepage({movies}) {
     return (
         <div className="website__container">
 
@@ -23,16 +23,12 @@ function Homepage() {
             </section >
                 <section className='top-films__container'>
                     <h2>TOP FILMS</h2>
-
+                    <section className='top-films-grid'>
+                    <Cards movies={movies}
                     
+                     /> 
+                    </section>
                     
-                    <article><MovieListApi/></article>
-
-                    <article><Cards /></article>
-
-                    <article></article>
-                    <article></article>
-                    <article></article>
                 </section>
             <section className='features__container'>
                 <h2>Features</h2>
