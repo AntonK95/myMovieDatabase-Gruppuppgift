@@ -43,7 +43,7 @@ function App() {
       <section className='inner__page-container'>
 
         <Routes>
-          <Route path='/' element={<Homepage />} />
+          <Route path='/' element={<Homepage movies={movies} />} />
           <Route path='/SearchResultsPage' element={<SearchResultsPage />} />
           <Route path='/FavoritePage' element={<FavoritePage />} />
           <Route path='/WatchlistPage' element={<WatchlistPage />} />
