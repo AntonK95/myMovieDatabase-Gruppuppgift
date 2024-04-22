@@ -19,6 +19,7 @@ import { useState, useEffect } from 'react';
 function App() {
 
   const [movies, setMovies] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
 
   const topMovies = async () => {
     try {
@@ -44,7 +45,7 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Homepage movies={movies} />} />
-          <Route path='/SearchResultsPage' element={<SearchResultsPage />} />
+          <Route path='/SearchResultsPage' element={<SearchResultsPage searchResults={searchResults} />} />
           <Route path='/FavoritePage' element={<FavoritePage />} />
           <Route path='/WatchlistPage' element={<WatchlistPage />} />
           <Route path='/SingleFilmPage' element={<SingleFilmPage />} />

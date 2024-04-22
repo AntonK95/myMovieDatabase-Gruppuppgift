@@ -10,12 +10,13 @@ function SearchField({ onSearch }) {
     const handleSearchInput = (event) => {
       setSearchTerm(event.target.value);
       onSearch(event.target.value);
+      console.log(event.target.value);
     };
   
     const handleSearchSubmit = async (event) => {
       event.preventDefault();
       try {
-        const response = await axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`);
+        const response = await axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`);
         console.log(response.data);
       } catch(error) {
         console.log(error);

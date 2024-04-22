@@ -14,8 +14,8 @@ const navigate = useNavigate();
 // setSearchText(event.target.value)
 // }
 
-const handleSearch = (searchText) => {
-  navigate('/SearchResultsPage?query=${searchText}');
+const handleSearch = (searchTerm) => {
+  navigate('/SearchResultsPage?query=${searchTerm}');
 }
 
   return (
