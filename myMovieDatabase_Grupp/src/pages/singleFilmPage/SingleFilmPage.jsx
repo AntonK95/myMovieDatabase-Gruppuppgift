@@ -26,7 +26,7 @@ function SingleFilmPage() {
             }
         };
         fetchMovieDetails();
-    }, [imdbID]);
+    }, [imdbID]);//hämtar ut data från api baserad på unika IDn och med fetchMovies körs en asynkront anrop till api:t.
 
     if (error) {
         return <p>{error}</p>
@@ -44,7 +44,7 @@ function SingleFilmPage() {
                 <img src={movieDetails.Poster} alt="Movie poster" className="singleFilm__hero" />
                 <h1 className='singlePage__h1'>{movieDetails.Title}</h1>
                 <article className="singleHero__content">
-                    <Link to="/search" className="singlePage__btn">Back to Search</Link>
+                    <Link to="/SearchResultsPage" className="singlePage__btn">Back to Search</Link>
                 </article>
             </section>
             <section className="detailed-info__container">
