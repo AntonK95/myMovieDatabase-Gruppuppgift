@@ -46,7 +46,7 @@ function App() {
           <Route path='/SearchResultsPage' element={<SearchResultsPage searchResults={searchResults} />} />
           <Route path='/FavoritePage' element={<FavoritePage />} />
           <Route path='/WatchlistPage' element={<WatchlistPage />} />
-          <Route path='/SingleFilmPage' element={<SingleFilmPage />} />
+          <Route path='/SingleFilm/:imdbID' element={<SingleFilmPage />} />
         </Routes>
       </section>
       <Footer />
