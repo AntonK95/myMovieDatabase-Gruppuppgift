@@ -1,7 +1,7 @@
 import './singleFilmPage.css'
 
 
-function SingleFilmPage() {
+function SingleFilmPage({ movie, onClose}) {
 
     return (
         <div className='single-page__container'>
@@ -17,9 +17,10 @@ function SingleFilmPage() {
                     <img src="" alt="movie poster" className="detailed-info__img" />
                 </article>
                 <article className="details__right">
-                    <h2>FILM TITEL</h2>
-                    <p className='p__margin'>lite info om movien</p>
-                    <button className='singlePage__btn' >Tillbaka</button>
+                    <h2>{movie.Title}</h2>
+                    <p className='p__margin'>{movie.Plot}</p>
+                    <p>{movie.Year}</p>
+                    <button onClick={onClose} className='singlePage__btn' >Tillbaka</button>
                 </article>
             </section>
             <section className="more-movies__container">

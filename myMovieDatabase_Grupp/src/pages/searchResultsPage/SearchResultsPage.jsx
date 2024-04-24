@@ -1,6 +1,9 @@
 
 import MovieCard from '../../components/movieCard/MovieCard';
 import './searchresultspage.css';
+import axios from 'axios';
+import {useState} from 'react';
+
 
 
 
