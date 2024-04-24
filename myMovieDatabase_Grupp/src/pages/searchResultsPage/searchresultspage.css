@@ -1,0 +1,19 @@
+
+
+
+.search-result__container {
+    margin: 0 auto;
+    margin-bottom: -1rem;
+    max-width: 1200px;
+    padding-top: 85px;
+    background-color: var(--light-grey);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+}
