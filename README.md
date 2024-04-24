@@ -1,4 +1,4 @@
-![Github Projects board](src/assets/githubprojects.png)
+![Github Projects board](./src/assets/githubprojects.png)
 
 
 ## Frågor
