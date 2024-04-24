@@ -32,7 +32,8 @@ function SearchField({ setSearchResults, onSearch }) {
               type="text" 
               placeholder='Sök' 
               value={searchTerm} 
-              onChange={handleSearchInput}>
+              onChange={handleSearchInput}
+              aria-label='Sök'>
             </input>
         </form>
         </div>

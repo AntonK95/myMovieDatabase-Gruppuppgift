@@ -5,7 +5,7 @@ h2 {
 
 .singlePage__h1 {
     position: absolute;
-    top: 75%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--white);
@@ -71,6 +71,7 @@ h2 {
     padding-top: 3rem;
     padding-right: 2rem;
     padding-left: 1.5rem;
+    padding-bottom: 3rem;
 }
 
 .details__right {
