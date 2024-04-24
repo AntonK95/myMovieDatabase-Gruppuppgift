@@ -76,13 +76,13 @@ h2 {
 
 .details__right {
     padding-top: 3rem;
-    max-width: 350px;
+    max-width: 300px;
+    line-height: 1.2;
+    font-size: 17px;
 }
 
 .details__right p {
     padding-bottom: 1rem;
-    line-height: 1.2;
-    font-size: 17px;
 }
 
 .more-movies__container {
