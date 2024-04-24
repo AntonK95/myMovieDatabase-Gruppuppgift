@@ -11,6 +11,15 @@ function FavoritePage() {
         }
     }, []);// hämtar sparade filmer från localstorage. Tolkas från JSON format och sätts till tillstandsvariabel favoriteMovies.
 
+    const handleRemoveFromFavourites = (movie) => {
+        const confirmDelete = window.confirm('Are you sure you want to remove the movie from favourites?');
+        if(confirmDelete) {
+            const updatedFavorites = favoriteMovies.filter(fav => fav.imdbID !== movie.imdbID);
+            setFavoriteMovies(updatedFavorites);
+            localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+        }
+    }
+
     return (
         <section className='favorite__container'>
         {favoriteMovies.length > 0 ? (
@@ -18,6 +27,7 @@ function FavoritePage() {
                 <div key={movie.imdbID} className="favorite__movie-card">
                     <img src={movie.Poster} alt={movie.Title} />
                     <h3>{movie.Title}</h3>
+                    <button onClick={() => handleRemoveFromFavourites(movie)}>Remove</button>
                 </div>
             ))
         ) : (
