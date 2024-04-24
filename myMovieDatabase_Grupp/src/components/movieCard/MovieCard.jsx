@@ -2,16 +2,16 @@ import './movieCard.css'
 
 import React from 'react'
 
-function MovieCard ({ movie}) {
-    
-    
-    
+
+function MovieCard ({ title, poster}) {
     return (
-        
         <div className="movie-card">
-           
-            <img src={movie.Poster} alt={movie.Title} />
-            <h5>{movie.Title}</h5>
+            <div className='icons-container'>
+                <img src="../../assets/eye.png" alt="" />
+            </div>
+            <img src={poster} alt={title} />
+            <h5>{title}</h5>
+
         </div>
     )
 }

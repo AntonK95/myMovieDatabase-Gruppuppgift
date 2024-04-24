@@ -13,12 +13,12 @@ import SingleFilmPage from './pages/singleFilmPage/SingleFilmPage.jsx';
 import { Routes, Route } from 'react-router-dom'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-// import SearchMovies from './components/searchMovies/SearchMovies.jsx';
 
 
 function App() {
 
   const [movies, setMovies] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
 
   const topMovies = async () => {
     try {
@@ -39,11 +39,11 @@ function App() {
   return (
 
     <div className="app">
-      <NavigationHeader />
+      <NavigationHeader setSearchResults={setSearchResults}/>
       <section className='inner__page-container'>
         <Routes>
           <Route path='/' element={<Homepage movies={movies} />} />
-          <Route path='/SearchResultsPage' element={<SearchResultsPage />} />
+          <Route path='/SearchResultsPage' element={<SearchResultsPage searchResults={searchResults} />} />
           <Route path='/FavoritePage' element={<FavoritePage />} />
           <Route path='/WatchlistPage' element={<WatchlistPage />} />
           <Route path='/SingleFilmPage' element={<SingleFilmPage />} />
