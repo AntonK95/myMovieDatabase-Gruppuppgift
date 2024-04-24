@@ -2,18 +2,18 @@
 
 
 .search-result__container {
-    padding-top: 100px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 2rem auto;
-    gap: 2rem;
+    margin: 0 auto;
+    margin-bottom: -1rem;
+    max-width: 1200px;
+    padding-top: 85px;
+    background-color: var(--light-grey);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
-.search-result__movie-card {
-    height: 300px;
-    width: 180px;
-    background-color: var(--blue-green);
-    margin: auto;
-    color: var(--white);
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 1rem;
+    padding: 1rem;
 }
