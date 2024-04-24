@@ -1,8 +1,8 @@
 
 import MovieCard from '../../components/movieCard/MovieCard';
 import './searchresultspage.css';
-import axios from 'axios';
-import {useState} from 'react';
+// import axios from 'axios';
+// import {useState} from 'react';
 
 
 
@@ -15,7 +15,11 @@ function SearchResultsPage({ searchResults }) { // Ta emot props!!!!
         <div className="search-results">
             {
                 searchResults.map((movie, index) => {
-                    return <MovieCard key={index} title={movie.Title} poster={movie.Poster}/>
+                    return <MovieCard 
+                    key={index} 
+                    imdbID={movie.imdbID} 
+                    title={movie.Title} 
+                    poster={movie.Poster}/>
                 })
             }
         </div>
