@@ -5,7 +5,7 @@ h2 {
 
 .singlePage__h1 {
     position: absolute;
-    top: 75%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--white);
@@ -75,6 +75,13 @@ h2 {
 
 .details__right {
     padding-top: 3rem;
+    max-width: 350px;
+}
+
+.details__right p {
+    padding-bottom: 1rem;
+    line-height: 1.2;
+    font-size: 17px;
 }
 
 .more-movies__container {

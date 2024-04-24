@@ -17,13 +17,13 @@ function MovieCard ({ title, poster, imdbID}) {
                         className="star"
                         src="./src/assets/star.png"
                         alt="Star Icon"
-                        // onClick={() => addToFavorites(movie)}
+                        //onClick={() => addToFavorites(movie)}
                     />
                     <img
                         className="search-eye"
                         src="./src/assets/eye.png"
                         alt="Eye Icon"
-                        // onClick={() => addToWatchList(movie)}
+                        //onClick={() => addToWatchList(movie)}
                     />
                 </div>
         </div>
