@@ -13,7 +13,6 @@ import SingleFilmPage from './pages/singleFilmPage/SingleFilmPage.jsx';
 import { Routes, Route } from 'react-router-dom'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-// import SearchMovies from './components/searchMovies/SearchMovies.jsx';
 
 
 function App() {
@@ -40,7 +39,7 @@ function App() {
   return (
 
     <div className="app">
-      <NavigationHeader />
+      <NavigationHeader setSearchResults={setSearchResults}/>
       <section className='inner__page-container'>
 
         <Routes>

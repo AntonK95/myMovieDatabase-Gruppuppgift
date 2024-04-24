@@ -1,12 +1,10 @@
 
 import { useState } from 'react';
 import axios from 'axios';
-import MovieCard from '../movieCard/MovieCard';
 
 const apiKey = '567f8027';
 
-function SearchField({ onSearch }) {
-  const [searchResults, setSearchResults] = useState([]);
+function SearchField({ setSearchResults, onSearch }) {
     const [searchTerm, setSearchTerm] = useState([]);
 
     const handleSearchInput = (event) => {
@@ -38,24 +36,6 @@ function SearchField({ onSearch }) {
             </input>
         </form>
         </div>
-        <div>
-        {searchResults.map((result, index) => (
-          <MovieCard 
-            key={ index }
-            title={result.Title}
-            poster={result.Poster}
-          />
-        ))}
-        {/* <div>
-          {searchResults.map((results, index) => (
-            <div key={ index }>
-              <h5>{ results.Title }</h5>
-              <img src={ results.Poster } alt={ results.Title } />
-            </div>
-          ))}
-        </div> */}
-        </div>
-      
     </>
   )
 }

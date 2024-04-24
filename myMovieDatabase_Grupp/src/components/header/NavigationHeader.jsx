@@ -1,21 +1,17 @@
 
-/*import SearchResultsPage from '../../pages/searchResultsPage/SearchResultsPage'*/
 import './navigation.css'
 import { Link, useNavigate } from 'react-router-dom'
 
 import SearchField from '../searchInput/SearchField'
 
-function NavigationHeader() {
+function NavigationHeader( {setSearchResults}) {
 
-// const [searchText, setSearchText] = useState('');
 const navigate = useNavigate();
 
-// const handleInputChange = (event) => {
-// setSearchText(event.target.value)
-// }
+
 
 const handleSearch = (searchTerm) => {
-  navigate('/SearchResultsPage?query=${searchTerm}');
+  navigate('/SearchResultsPage');
 }
 
   return (
@@ -37,7 +33,7 @@ const handleSearch = (searchTerm) => {
             </ul>
           </div>
           <div className='nav-right'>
-            <SearchField onSearch={handleSearch} />
+            <SearchField setSearchResults={setSearchResults} onSearch={handleSearch} />
           </div>
         </div>
       </div>
