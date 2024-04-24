@@ -18,9 +18,9 @@ function FavoritePage() {
             setFavoriteMovies(updatedFavorites);
             localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
         }
-    }
+    }//funktion som tar bort data från favs när usern klickar på remove.
 
-    return (
+    return (//här renderas varje film ut som en div.
         <section className='favorite__container'>
         {favoriteMovies.length > 0 ? (
             favoriteMovies.map((movie) => (

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 function MovieCard({ title, poster, imdbID, setFavourites, favourites }) {
     const [watchList, setWatchList] = useState([]);
 
+    //useEffect hook som hämtar favos och watchlist från localstorage vid montering och visar det som är sparad.
     useEffect(() => {
         const storedFavorites = localStorage.getItem('favorites');
         if (storedFavorites) {
@@ -17,6 +18,7 @@ function MovieCard({ title, poster, imdbID, setFavourites, favourites }) {
         }
     }, []);
 
+    //funk som lägger till film på favosidan efter att ha kollat om den redan finns eller ej.
     const addToFavorites = () => {
         const movie = { title, poster, imdbID,Poster: poster, Title: title };
         if (!isMovieInLocalStorage(movie, favourites)) {
@@ -33,6 +35,7 @@ function MovieCard({ title, poster, imdbID, setFavourites, favourites }) {
         }
     };
 
+    //funk för att kontrollera om en viss film finns lagrat i localstorage.
     const isMovieInLocalStorage = (movie, list) => {
         return list.some(item => item.imdbID === movie.imdbID);
     };

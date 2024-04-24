@@ -26,7 +26,7 @@ function SingleFilmPage() {
             }
         };
         fetchMovieDetails();
-    }, [imdbID]);
+    }, [imdbID]);//hämtar ut data från api baserad på unika IDn och med fetchMovies körs en asynkront anrop till api:t.
 
     if (error) {
         return <p>{error}</p>
