@@ -3,6 +3,7 @@ h1 {
     color: var(--white);
     margin-bottom: 1rem;
     font-family: var(--header-font-family);
+    max-width: 125px;
 }
 
 h2{
@@ -96,12 +97,36 @@ h2{
 }
 
 .features__container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
     padding: 1.5rem;
     color: var(--blue-green);
     background-color: var(--light-grey);
     font-family: var(--header-font-family);
     min-height: 400px;
+}
+
+.features__title {
+    text-align: center;
+    padding: 1rem;
+}
+
+.article__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.features__container--both {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    max-width: 620px;
+    min-width: 50px;
+    margin: 0 auto;
+}
+
+.features__article {
+    border: 1px solid var(--blue-green);
+    background-color: var(--grey);
+    border-radius: 3px;
+    padding: 1rem;
 }
