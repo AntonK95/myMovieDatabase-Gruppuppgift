@@ -16,6 +16,12 @@
     overflow: hidden;
     z-index:99;
     position: relative;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.card-container:hover {
+    scale: 1.05;
 }
 
 .card-container .star{
