@@ -1,3 +1,6 @@
+![Github Projects board](src/assets/githubprojects.png)
+
+
 ## Frågor
 
 ### Inledning
