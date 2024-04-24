@@ -1,4 +1,6 @@
-![Github Projects board](./src/assets/githubprojects.png)
+![Github Projects board](/assets/githubprojects.png)
+![Github Projects board](assets/githubprojects.png)
+![Github Projects board](myMovieDatabase_Grupp/assets/githubprojects.png)
 
 
 ## Frågor
