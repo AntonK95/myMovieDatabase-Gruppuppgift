@@ -21,20 +21,22 @@ function WatchlistPage() {
     }//callback funktion triggas när användaren klickar på remove btn.
 
     return (
-        <section className='watchlist__container'>
-        {watchlistMovies.length > 0 ? (//är watchMoviesList inte tom så körs nästa annars felmeddelande.
-            watchlistMovies.map((movie) => (
+        <section className='watchlist-page__container'>
+            <section className='watchlist__container'>
+                {watchlistMovies.length > 0 ? (//är watchMoviesList inte tom så körs nästa annars felmeddelande.
+                    watchlistMovies.map((movie) => (
 
-                <div key={movie.imdbID} className="watchlist__movie-card">
-                    <img src={movie.Poster} alt={movie.Title} />
-                    <h3>{movie.Title}</h3>
-                    <button onClick={() => handleRemoveFromWatchlist(movie)}>Remove</button>
-                </div>
-            ))//renderar ut varje filmcard
-        ) : (
-            <p>No watch list movies yet.</p>
-        )}
-    </section>
+                        <div key={movie.imdbID} className="watchlist__movie-card">
+                            <img src={movie.Poster} alt={movie.Title} />
+                            <h3>{movie.Title}</h3>
+                            <button onClick={() => handleRemoveFromWatchlist(movie)}>Remove</button>
+                        </div>
+                    ))//renderar ut varje filmcard
+                ) : (
+                    <p>No watch list movies yet.</p>
+                )}
+            </section>
+        </section>
     );
 }
 
