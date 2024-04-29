@@ -21,6 +21,7 @@ function FavoritePage() {
     }//funktion som tar bort data från favs när usern klickar på remove.
 
     return (//här renderas varje film ut som en div.
+    <section className='favorite-page__container'>
         <section className='favorite__container'>
         {favoriteMovies.length > 0 ? (
             favoriteMovies.map((movie) => (
@@ -33,6 +34,7 @@ function FavoritePage() {
         ) : (
             <p>No favorite movies yet.</p>
         )}
+    </section>
     </section>
     );
 }

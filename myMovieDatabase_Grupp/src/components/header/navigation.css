@@ -14,7 +14,6 @@ body {
 .nav-container {
     margin: 0 auto;
     width: 100vw;
-    max-width: 1800px;
     position: fixed;
     top: 0;
     z-index: 1000;
