@@ -16,7 +16,7 @@ function WatchlistPage() {
         if(confirmDelete) {
             const updatedWatchlist = watchlistMovies.filter(fav => fav.imdbID !== movie.imdbID);
             setWatchlistMovies(updatedWatchlist);
-            localStorage.setItem('favorites', JSON.stringify(updatedWatchlist));
+            localStorage.setItem('watchlist', JSON.stringify(updatedWatchlist));
         }
     }//callback funktion triggas när användaren klickar på remove btn.
 
