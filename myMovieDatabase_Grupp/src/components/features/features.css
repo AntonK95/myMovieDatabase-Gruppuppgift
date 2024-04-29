@@ -1,0 +1,26 @@
+.features__article {
+    font-family: var(--header-font-family);
+    font-weight: 400;
+    max-width: 500px;
+    background-color: var(--white);
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin: 0rem .5rem 1rem .5rem;
+}
+
+.features__article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 3px;
+}
+
+.features__p {
+font-family: var(--desc-font-family);
+padding: 0rem .5rem .5rem .5rem;
+}
+
+.article__title {
+padding: .5rem
+}
