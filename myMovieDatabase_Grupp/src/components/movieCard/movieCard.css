@@ -63,11 +63,14 @@
 
 .search-result__img{
    max-width: 100%;
-   width:auto;
-   height: auto;
+   width:300px;
+   height: 400px;
+   max-height: 100%;
+   max-width: 100%;
    position: relative;
    cursor: pointer;
    align-self: center;
+   object-fit: cover;
 }
 
 .search-result__img img{

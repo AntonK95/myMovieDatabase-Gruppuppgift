@@ -3,6 +3,8 @@ import SingleFilmPage from '../singleFilmPage/SingleFilmPage'; // Denna läses i
 import './homepage.css';
 import { Link } from 'react-router-dom'; // Denna läses inte nu då vi har kommenterat bort Link runt "om-filmen__btn"
 import Cards from '../../components/cards/Cards';
+import FeatureRight from '../../components/features/FeatureRight';
+import FeatureLeft from '../../components/features/FeatureLeft';
 
 
 function Homepage({ movies }) {
@@ -50,22 +52,8 @@ function Homepage({ movies }) {
             <section className='features__container'>
                 <h2 className='features__title'>Features</h2>
                 <section className='features__container--both'>
-                    <article className='features__article features__article--left'>
-                        <h3 className='article__title'>Erbjudanden</h3>
-                        <p className='features__p'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                            Iusto placeat quis dolores alias nulla iure illum fuga non 
-                            assumenda perspiciatis!
-                        </p>
-                    </article>
-                    <article className='features__article features__article--right'>
-                        <h3 className='article__title'>Lorem Ipsum</h3>
-                        <p className='features__p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Veniam doloremque cupiditate nesciunt in quia cum, 
-                        soluta ex quis nemo quam aliquid blanditiis omnis. 
-                        Voluptatibus illum repellat nemo itaque expedita dolores 
-                        obcaecati voluptatum id neque quod error suscipit corrupti eius, 
-                        est harum sunt quidem iure aut.</p>
-                    </article>
+                    <FeatureLeft />
+                    <FeatureRight />
                 </section>
             </section>
         </div>
